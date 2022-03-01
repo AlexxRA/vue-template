@@ -1,6 +1,6 @@
 <template lang="pug">
 .header.px-8
-  //- app-sidebar(v-model="drawer")
+  Sidebar(v-model="drawer")
   v-app-bar(
     color="background",
     fixed,
@@ -11,23 +11,20 @@
     v-divider.header__divider(vertical, inset)
     v-toolbar-title.ml-4.h1.primary--text(data-cy="header__title") {{ this.title }}
     v-spacer
-    //- comments-menu
     v-divider.header__divider(vertical, inset)
-    //- profile-menu
-    v-divider.header__divider(vertical, inset)
-    v-icon.ml-4.geodis-banner(fill="#3200E6") $geodisBanner
+    v-icon.ml-4.geodis-banner(fill="#3200E6") $logo
 
 </template>
 
 <script>
-// import AppSidebar from '@/components/Sidebar.vue'
+import Sidebar from '@/components/Sidebar.vue'
 export default {
    components: {
-    // AppSidebar,
+    Sidebar,
   },
   data: () => ({
     drawer: false,
-    title: 'Title text test'
+    title: 'WELCOME TO MY APP'
   }),
 }
 </script>

@@ -1,7 +1,9 @@
 <template lang="pug">
-  v-app
-    v-main
+v-app
+  div
+    v-main.banner
       Header
+      router-view(style="margin-top: 56px;")
 </template>
 
 <script>
